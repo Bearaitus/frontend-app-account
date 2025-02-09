@@ -550,53 +550,7 @@ class AccountSettingsPage extends React.Component {
             )}
         </div>
 
-        <div className="account-section pt-3 mb-5" id="profile-information" ref={this.navLinkRefs['#profile-information']}>
-          <h2 className="section-heading h4 mb-3">
-            {this.props.intl.formatMessage(messages['account.settings.section.profile.information'])}
-          </h2>
-
-          <EditableSelectField
-            name="level_of_education"
-            type="select"
-            value={this.props.formValues.level_of_education}
-            options={getConfig().ENABLE_COPPA_COMPLIANCE
-              ? educationLevelOptions.filter(option => option.value !== 'el')
-              : educationLevelOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.education'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.education.empty'])}
-            {...editableFieldProps}
-          />
-          <EditableSelectField
-            name="gender"
-            type="select"
-            value={this.props.formValues.gender}
-            options={genderOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.gender'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.gender.empty'])}
-            {...editableFieldProps}
-          />
-          {hasWorkExperience
-          && (
-          <EditableSelectField
-            name="work_experience"
-            type="select"
-            value={this.props.formValues?.extended_profile?.find(field => field.field_name === 'work_experience')?.field_value}
-            options={workExperienceOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.work.experience'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.work.experience.empty'])}
-            {...editableFieldProps}
-          />
-          )}
-          <EditableSelectField
-            name="language_proficiencies"
-            type="select"
-            value={this.props.formValues.language_proficiencies}
-            options={languageProficiencyOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.language.proficiencies'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.language.proficiencies.empty'])}
-            {...editableFieldProps}
-          />
-        </div>
+        
         
 
         <div className="account-section pt-3 mb-5" id="site-preferences" ref={this.navLinkRefs['#site-preferences']}>
