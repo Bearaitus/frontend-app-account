@@ -558,7 +558,7 @@ class AccountSettingsPage extends React.Component {
              Site language
           </h2>
 
-          <BetaLanguageBanner />
+          
           <EditableSelectField
             name="siteLanguage"
             type="select"
