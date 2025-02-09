@@ -580,9 +580,6 @@ class AccountSettingsPage extends React.Component {
         
       </>
     );
-    const style = document.createElement("style");
-    style.innerHTML = `.nav-link:hover { color: #ff0000 !important; }`;
-    document.head.appendChild(style);
   }
 
   renderError() {
