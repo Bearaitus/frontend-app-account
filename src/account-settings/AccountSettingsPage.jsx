@@ -564,8 +564,11 @@ class AccountSettingsPage extends React.Component {
             type="select"
             options={this.props.siteLanguageOptions.filter(option => option.value === 'en')}
             value={this.props.siteLanguage.draft !== undefined ? this.props.siteLanguage.draft : this.context.locale}
-            
-            helpText={this.props.intl.formatMessage(messages['account.settings.field.site.language.help.text'])}
+            getOptionLabel={(option) => (
+              <span style={{ fontWeight: option.value === 'en' ? 'bold' : 'normal' }}>
+                {option.label}
+              </span>
+            )}
             {...editableFieldProps}
           />
           
