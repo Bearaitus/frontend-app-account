@@ -157,6 +157,9 @@ $fa-font-path: "~font-awesome/fonts";
 }
 
 .main-nav:hover {
-  background-color: #ff0000;
-  color: #fff;
+  background-color: #ff0000 !important;
+}
+
+.main-nav:hover * {
+  color: #fff !important;
 }
