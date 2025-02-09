@@ -43,6 +43,12 @@ const JumpNav = ({
               Site language
           </NavHashLink>
         </li>
+
+        <li>
+          <NavHashLink to="#in-development">
+              In development
+          </NavHashLink>
+        </li>
         
       </Scrollspy>
       {showPreferences && (

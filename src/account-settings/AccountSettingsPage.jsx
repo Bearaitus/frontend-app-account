@@ -570,6 +570,13 @@ class AccountSettingsPage extends React.Component {
           />
           
         </div>
+
+        <div className="account-section pt-3 mb-5" id="site-preferences" ref={this.navLinkRefs['#in-development']}>
+          <h2 className="section-heading h4 mb-3">
+             In development
+          </h2>
+          
+        </div>
       </>
     );
   }
