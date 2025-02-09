@@ -713,20 +713,7 @@ class AccountSettingsPage extends React.Component {
             helpText={this.props.intl.formatMessage(messages['account.settings.field.site.language.help.text'])}
             {...editableFieldProps}
           />
-          <EditableSelectField
-            name="time_zone"
-            type="select"
-            value={this.props.formValues.time_zone}
-            options={timeZoneOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.time.zone'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.time.zone.empty'])}
-            helpText={this.props.intl.formatMessage(messages['account.settings.field.time.zone.description'])}
-            {...editableFieldProps}
-            onSubmit={(formId, value) => {
-              // the endpoint will not accept an empty string. it must be null
-              this.handleSubmit(formId, value || null);
-            }}
-          />
+          
         </div>
       </>
     );
