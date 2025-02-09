@@ -700,7 +700,7 @@ class AccountSettingsPage extends React.Component {
 
         <div className="account-section pt-3 mb-5" id="site-preferences" ref={this.navLinkRefs['#site-preferences']}>
           <h2 className="section-heading h4 mb-3">
-            {this.props.intl.formatMessage(messages['account.settings.section.site.preferences'])}
+             Site language
           </h2>
 
           <BetaLanguageBanner />
@@ -709,7 +709,7 @@ class AccountSettingsPage extends React.Component {
             type="select"
             options={this.props.siteLanguageOptions.filter(option => option.value === 'en')}
             value={this.props.siteLanguage.draft !== undefined ? this.props.siteLanguage.draft : this.context.locale}
-            label={this.props.intl.formatMessage(messages['account.settings.field.site.language'])}
+            
             helpText={this.props.intl.formatMessage(messages['account.settings.field.site.language.help.text'])}
             {...editableFieldProps}
           />

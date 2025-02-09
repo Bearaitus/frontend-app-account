@@ -44,7 +44,7 @@ const JumpNav = ({
         
         <li>
           <NavHashLink to="#site-preferences">
-            {intl.formatMessage(messages['account.settings.section.site.preferences'])}
+              Site language
           </NavHashLink>
         </li>
         
