@@ -728,28 +728,6 @@ class AccountSettingsPage extends React.Component {
             }}
           />
         </div>
-
-        <div className="account-section pt-3 mb-5" id="linked-accounts" ref={this.navLinkRefs['#linked-accounts']}>
-          <h2 className="section-heading h4 mb-3">{this.props.intl.formatMessage(messages['account.settings.section.linked.accounts'])}</h2>
-          <p>
-            {this.props.intl.formatMessage(
-              messages['account.settings.section.linked.accounts.description'],
-              { siteName: getConfig().SITE_NAME },
-            )}
-          </p>
-          <ThirdPartyAuth />
-        </div>
-
-        {getConfig().ENABLE_ACCOUNT_DELETION
-          && (
-          <div className="account-section pt-3 mb-5" id="delete-account" ref={this.navLinkRefs['#delete-account']}>
-            <DeleteAccount
-              isVerifiedAccount={this.props.isActive}
-              hasLinkedTPA={hasLinkedTPA}
-            />
-          </div>
-          )}
-
       </>
     );
   }
