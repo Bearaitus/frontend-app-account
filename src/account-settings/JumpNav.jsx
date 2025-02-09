@@ -36,11 +36,7 @@ const JumpNav = ({
             {intl.formatMessage(messages['account.settings.section.account.information'])}
           </NavHashLink>
         </li>
-        <li>
-          <NavHashLink to="#profile-information">
-            {intl.formatMessage(messages['account.settings.section.profile.information'])}
-          </NavHashLink>
-        </li>
+        
         
         <li>
           <NavHashLink to="#site-preferences">
