@@ -565,10 +565,11 @@ class AccountSettingsPage extends React.Component {
             options={this.props.siteLanguageOptions.filter(option => option.value === 'en')}
             value={this.props.siteLanguage.draft !== undefined ? this.props.siteLanguage.draft : this.context.locale}
             getOptionLabel={(option) => (
-              <span style={{ fontWeight: option.value === 'en' ? 'bold' : 'normal' }}>
+              <span style={{ fontWeight: this.props.siteLanguage.draft === option.value ? 'bold' : 'normal' }}>
                 {option.label}
               </span>
             )}
+            isEditable={false}
             {...editableFieldProps}
           />
           
