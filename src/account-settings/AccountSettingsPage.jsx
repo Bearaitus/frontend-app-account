@@ -72,7 +72,7 @@ class AccountSettingsPage extends React.Component {
   }
 
   componentDidMount() {
-    document.cookie = "openedx-language-preference=ru; path=/; max-age=31536000; SameSite=Lax";
+    document.cookie = "openedx-language-preference=en; path=/; max-age=31536000; domain=.pt.edtechl.com; SameSite=None";
     this.props.fetchCourseList();
     this.props.fetchSettings();
     this.props.fetchSiteLanguages(this.props.navigate);
