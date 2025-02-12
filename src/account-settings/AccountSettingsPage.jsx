@@ -563,7 +563,7 @@ class AccountSettingsPage extends React.Component {
             name="siteLanguage"
             type="select"
             options={this.props.siteLanguageOptions.filter(option => option.value === 'en')}
-            value={this.props.siteLanguage.draft ?? this.context.locale ?? 'en'}
+            value='en'
             renderValue={value => <strong>{value}</strong>}
             helpText={this.props.intl.formatMessage(messages['account.settings.field.site.language.help.text'])}
             isEditable={false}
