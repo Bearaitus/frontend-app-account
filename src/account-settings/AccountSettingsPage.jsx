@@ -52,14 +52,6 @@ import { fetchSiteLanguages } from './site-language';
 import { fetchCourseList } from '../notification-preferences/data/thunks';
 import { withLocation, withNavigate } from './hoc';
 
-const setLanguageCookie = () => {
-  document.cookie = "openedx-language-preference=en; path=/; max-age=31536000; SameSite=Lax";
-};
-
-useEffect(() => {
-  setLanguageCookie();
-}, []);
-
 class AccountSettingsPage extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -80,6 +72,7 @@ class AccountSettingsPage extends React.Component {
   }
 
   componentDidMount() {
+    document.cookie = "openedx-language-preference=ru; path=/; max-age=31536000; SameSite=Lax";
     this.props.fetchCourseList();
     this.props.fetchSettings();
     this.props.fetchSiteLanguages(this.props.navigate);
