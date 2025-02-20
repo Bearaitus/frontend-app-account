@@ -576,7 +576,7 @@ class AccountSettingsPage extends React.Component {
 
         <div className="account-section pt-3 mb-5" id="site-preferences" ref={this.navLinkRefs['#in-development']}>
           <h2 className="section-heading h4 mb-3">
-             In development
+             В разработке
           </h2>
           
         </div>

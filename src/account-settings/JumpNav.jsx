@@ -46,7 +46,7 @@ const JumpNav = ({
 
         <li>
           <NavHashLink to="#in-development">
-              In development
+              В разработке
           </NavHashLink>
         </li>
         
