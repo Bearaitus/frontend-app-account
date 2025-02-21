@@ -40,7 +40,7 @@ const JumpNav = ({
         
         <li>
           <NavHashLink to="#site-preferences">
-              Site language
+              Язык сайта
           </NavHashLink>
         </li>
 

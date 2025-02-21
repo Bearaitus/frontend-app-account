@@ -556,7 +556,7 @@ class AccountSettingsPage extends React.Component {
 
         <div className="account-section pt-3 mb-5" id="site-preferences" ref={this.navLinkRefs['#site-preferences']}>
           <h2 className="section-heading h4 mb-3">
-             Site language
+             Язык сайта
           </h2>
 
           
@@ -568,7 +568,7 @@ class AccountSettingsPage extends React.Component {
             value={this.props.siteLanguage.draft ?? this.context.locale ?? 'en'}
             renderValue={value => <strong>{value}</strong>}
             helpText={this.props.intl.formatMessage(messages['account.settings.field.site.language.help.text'])}
-            isEditable={true}
+            isEditable={false}
             {...editableFieldProps}
           />
           
