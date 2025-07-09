@@ -8,51 +8,26 @@ import {
 } from '@edx/frontend-platform';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Routes, Outlet } from 'react-router-dom';
-
-import Header from '@edx/frontend-component-header';
-import FooterSlot from '@openedx/frontend-slot-footer';
-
-import configureStore from './data/configureStore';
-import AccountSettingsPage, { NotFoundPage } from './account-settings';
-import IdVerificationPageSlot from './plugin-slots/IdVerificationPageSlot';
 import messages from './i18n';
-
-import './index.scss';
-import Head from './head/Head';
-import NotificationCourses from './notification-preferences/NotificationCourses';
-import NotificationPreferences from './notification-preferences/NotificationPreferences';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
-    <AppProvider store={configureStore()}>
-      <Head />
-      <Routes>
-        <Route element={(
-          <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
-            <Header />
-            <main className="flex-grow-1" id="main" style={{ minHeight: '85vh' }}>
-              <Outlet />
-            </main>
-            <FooterSlot />
-          </div>
-        )}
-        >
-          <Route path="/notifications/:courseId" element={<NotificationPreferences />} />
-          <Route path="/notifications" element={<NotificationCourses />} />
-          <Route
-            path="/id-verification/*"
-            element={<IdVerificationPageSlot />}
-          />
-          <Route path="/" element={<AccountSettingsPage />} />
-          <Route path="/notfound" element={<NotFoundPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
-    </AppProvider>,
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      fontFamily: 'sans-serif',
+      textAlign: 'center',
+    }}>
+      <img src="/path/to/your/image.png" alt="В разработке" style={{ maxWidth: '300px', marginBottom: '20px' }} />
+      <h1>В разработке</h1>
+    </div>,
     document.getElementById('root'),
   );
 });
+
 
 subscribe(APP_INIT_ERROR, (error) => {
   ReactDOM.render(<ErrorPage message={error.message} />, document.getElementById('root'));
